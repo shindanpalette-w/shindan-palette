@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>診断パレット｜まだ知らない自分、見つけよ。</title>
+  <meta
+    name="description"
+    content="恋愛・性格・相性・おもしろ診断を無料で楽しめる診断サイト。気になる診断を選んで、まだ知らない自分を見つけよう。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-mark">♡</span>
+      <div>
+        <h1>診断パレット</h1>
+        <p>まだ知らない自分、見つけよ。</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#diagnosis">診断一覧</a>
+      <a href="#talk">みんなの診断トーク</a>
+    </nav>
+  </header>
+
+
+  <!-- メイン -->
+  <main>
+
+    <!-- メインビジュアル -->
+    <section class="hero">
+
+      <div class="hero-text">
+        <p class="hero-small">あなたはどんなタイプ？</p>
+
+        <h2>
+          まだ知らない<br>
+          <span>自分を見つけよう。</span>
+        </h2>
+
+        <p class="hero-description">
+          恋愛・性格・相性・おもしろ診断を<br>
+          サクッと無料で楽しめます。
+        </p>
+
+        <a href="#diagnosis" class="main-button">
+          診断してみる ♡
+        </a>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-heart">♡</div>
+        <p>人気診断</p>
+        <h3>あなたの<br>恋愛タイプ診断</h3>
+        <span>全12問・約3分</span>
+      </div>
+
+    </section>
+
+
+    <!-- 診断一覧 -->
+    <section id="diagnosis" class="section">
+
+      <div class="section-title">
+        <span>♡</span>
+        <div>
+          <p>DIAGNOSIS</p>
+          <h2>おすすめ診断</h2>
+        </div>
+      </div>
+
+      <div class="diagnosis-grid">
+
+        <article class="diagnosis-card featured">
+          <div class="card-icon">♡</div>
+          <span class="category">恋愛</span>
+          <h3>恋愛タイプ診断</h3>
+          <p>
+            12の質問から、あなたの恋愛傾向を8タイプに分類します。
+          </p>
+          <button class="diagnosis-button" data-diagnosis="love">
+            診断する
+          </button>
+        </article>
+
+
+        <article class="diagnosis-card">
+          <div class="card-icon">♧</div>
+          <span class="category">恋愛</span>
+          <h3>恋愛依存度診断</h3>
+          <p>
+            恋をすると、どのくらい相手中心になる？
+          </p>
+        <button class="diagnosis-button" data-diagnosis="dependence">
+  診断する
+</button>
+</article>
+
+<article class="diagnosis-card">
+  <div class="card-icon">♡</div>
+  <span class="category">恋愛</span>
+  <h3>モテタイプ診断</h3>
+  <p>
+    あなたはどんな魅力で人を惹きつける？
+  </p>
+  <button class="diagnosis-button" data-diagnosis="charm">
+    診断する
+  </button>
+</article>
+       
+
+
+        <article class="diagnosis-card">
+          <div class="card-icon">✦</div>
+          <span class="category">性格</span>
+          <h3>サイコパス傾向診断</h3>
+          <p>
+            あなたの冷静さ・大胆さ・共感傾向をチェック。
+          </p>
+         <button class="diagnosis-button" data-diagnosis="psychopath">
+  診断する
+</button>
+        </article>
+
+
+        <article class="diagnosis-card">
+          <div class="card-icon">☾</div>
+          <span class="category">性格</span>
+          <h3>腹黒度診断</h3>
+          <p>
+            あなたの心に隠れている裏の顔は？
+          </p>
+         <button class="diagnosis-button" data-diagnosis="darkness">
+  診断する
+</button>
+        </article>
+<article class="diagnosis-card">
+
+  <div class="card-icon">🧠</div>
+
+  <span class="category">性格</span>
+
+  <h3>精神年齢診断</h3>
+
+  <p>
+    あなたの考え方は何歳くらい？精神年齢をチェック。
+  </p>
+
+  <button class="diagnosis-button" data-diagnosis="mental-age">
+    診断する
+  </button>
+
+</article>
+</article>
+
+<article class="diagnosis-card">
+
+  <div class="card-icon">🎭</div>
+
+  <span class="category">性格</span>
+
+  <h3>隠れ性格診断</h3>
+
+  <p>
+    普段は見せない、あなたの本当の性格をチェック。
+  </p>
+
+  <button class="diagnosis-button" data-diagnosis="hidden-personality">
+    診断する
+  </button>
+
+</article>
+ 
+<article class="diagnosis-card">
+  <div class="card-icon">♡♡</div>
+  <span class="category">恋愛</span>
+  <h3>ふたりの相性診断</h3>
+  <p>
+    ふたりの回答から、恋愛相性をチェック。
+  </p>
+  <button class="diagnosis-button" data-diagnosis="compatibility">
+    診断する
+  </button>
+</article>
+      </div>
+
+    </section>
+
+
+    <!-- 掲示板プレビュー -->
+    <section id="talk" class="talk-section">
+
+      <div class="section-title">
+        <span>♡</span>
+        <div>
+          <p>COMMUNITY</p>
+          <h2>みんなの診断トーク</h2>
+        </div>
+      </div>
+
+      <p class="talk-description">
+        診断結果について、みんなでゆるく話そう。
+      </p>
+
+
+      <div class="post">
+
+        <div class="post-top">
+          <span class="post-tag">恋愛タイプ診断</span>
+          <span class="post-time">5分前</span>
+        </div>
+
+        <strong>一途な尽くし型</strong>
+
+        <p>
+          思ったより当たっててびっくり。みんな何タイプだった？
+        </p>
+
+        <div class="post-actions">
+          <span>♡ 18</span>
+          <span>返信 3件</span>
+        </div>
+
+      </div>
+
+
+      <div class="post">
+
+        <div class="post-top">
+          <span class="post-tag">サイコパス傾向診断</span>
+          <span class="post-time">12分前</span>
+        </div>
+
+        <strong>サイコパス傾向 72%</strong>
+
+        <p>
+          72％だったんだけど高いのかな？笑
+        </p>
+
+        <div class="post-actions">
+          <span>♡ 11</span>
+          <span>返信 6件</span>
+        </div>
+
+      </div>
+
+
+      <div class="post">
+
+        <div class="post-top">
+          <span class="post-tag">恋愛依存度診断</span>
+          <span class="post-time">25分前</span>
+        </div>
+
+        <strong>恋愛依存度 84%</strong>
+
+        <p>
+          高すぎて笑った。これは当たってるかも。
+        </p>
+
+        <div class="post-actions">
+          <span>♡ 25</span>
+          <span>返信 12件</span>
+        </div>
+
+      </div>
+
+
+      <button class="board-button">
+        掲示板をもっと見る →
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- フッター -->
+  <footer>
+
+    <div class="footer-logo">
+      ♡ 診断パレット
+    </div>
+
+    <p>
+      恋愛・性格・相性・おもしろ診断を楽しめる無料診断サイト
+    </p>
+
+    <div class="footer-links">
+      <a href="#">このサイトについて</a>
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">お問い合わせ</a>
+    </div>
+
+    <small>
+      © 2026 診断パレット
+    </small>
+
+  </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

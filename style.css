@@ -1,0 +1,875 @@
+/* ===== 基本設定 ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #4d354b;
+  background:
+    radial-gradient(circle at 10% 10%, #ffe7ef 0, transparent 25%),
+    radial-gradient(circle at 90% 20%, #eee6ff 0, transparent 28%),
+    #fffafa;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* ===== ヘッダー ===== */
+.header {
+  min-height: 82px;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #f6e4ec;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  font-size: 42px;
+  color: #f45f8d;
+  line-height: 1;
+}
+
+.logo h1 {
+  font-size: 23px;
+  letter-spacing: .05em;
+}
+
+.logo p {
+  color: #e56b91;
+  font-size: 11px;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #f05282;
+}
+
+
+/* ===== メインビジュアル ===== */
+.hero {
+  width: min(1180px, 92%);
+  min-height: 500px;
+  margin: 38px auto 70px;
+  padding: 65px 7%;
+  border-radius: 38px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  background:
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,.9), transparent 22%),
+    linear-gradient(135deg, #fff0f5, #f4edff);
+
+  box-shadow: 0 25px 70px rgba(129, 83, 113, .12);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::after {
+  content: "♡";
+  position: absolute;
+  right: 5%;
+  top: -90px;
+  font-size: 300px;
+  color: rgba(255, 122, 163, .08);
+  transform: rotate(-12deg);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-small {
+  color: #e8608a;
+  font-weight: bold;
+  letter-spacing: .12em;
+  margin-bottom: 12px;
+}
+
+.hero h2 {
+  font-size: clamp(38px, 6vw, 72px);
+  line-height: 1.25;
+  letter-spacing: .03em;
+}
+
+.hero h2 span {
+  color: #ef5c8b;
+}
+
+.hero-description {
+  margin: 25px 0 32px;
+  font-size: 17px;
+}
+
+.main-button {
+  display: inline-block;
+  padding: 16px 42px;
+  border-radius: 999px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f04f7f, #f57ba0);
+  box-shadow: 0 12px 28px rgba(240, 79, 127, .25);
+  transition: .25s;
+}
+
+.main-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(240, 79, 127, .35);
+}
+
+.hero-card {
+  width: 290px;
+  min-width: 290px;
+  padding: 38px 25px;
+  text-align: center;
+  border-radius: 30px;
+  background: rgba(255,255,255,.76);
+  border: 1px solid rgba(255,255,255,.9);
+  box-shadow: 0 18px 50px rgba(109, 75, 113, .12);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-heart {
+  font-size: 55px;
+  color: #f36591;
+}
+
+.hero-card p {
+  color: #e45b87;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero-card h3 {
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+.hero-card span {
+  font-size: 13px;
+  color: #8d7788;
+}
+
+
+/* ===== 共通セクション ===== */
+.section,
+.talk-section {
+  width: min(1120px, 90%);
+  margin: 0 auto 90px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 28px;
+}
+
+.section-title > span {
+  font-size: 40px;
+  color: #f35f8d;
+}
+
+.section-title p {
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: #c887a0;
+}
+
+.section-title h2 {
+  font-size: 28px;
+}
+
+
+/* ===== 診断カード ===== */
+.diagnosis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.diagnosis-card {
+  min-height: 275px;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid #f5e5eb;
+  box-shadow: 0 12px 35px rgba(94, 67, 84, .08);
+  transition: .25s;
+}
+
+.diagnosis-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(94, 67, 84, .13);
+}
+
+.diagnosis-card.featured {
+  background: linear-gradient(145deg, #fff1f6, #fff);
+}
+
+.card-icon {
+  font-size: 37px;
+  color: #ef648f;
+  margin-bottom: 10px;
+}
+
+.category {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff0f5;
+  color: #e05a84;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.diagnosis-card h3 {
+  margin: 12px 0 7px;
+  font-size: 21px;
+}
+
+.diagnosis-card p {
+  color: #7f6d79;
+  font-size: 14px;
+  min-height: 55px;
+}
+
+.diagnosis-button,
+.coming-button,
+.board-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.diagnosis-button {
+  margin-top: 18px;
+  padding: 11px 25px;
+  border-radius: 999px;
+  background: #f15c89;
+  color: white;
+  font-weight: bold;
+}
+
+.coming-button {
+  margin-top: 18px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #f3edf1;
+  color: #a58f9e;
+}
+
+
+/* ===== 掲示板 ===== */
+.talk-section {
+  padding: 45px;
+  border-radius: 34px;
+  background: linear-gradient(145deg, #fff2f6, #f7f2ff);
+}
+
+.talk-description {
+  margin: -18px 0 25px 53px;
+  color: #8a7383;
+}
+
+.post {
+  background: rgba(255,255,255,.9);
+  padding: 22px 25px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  box-shadow: 0 7px 20px rgba(95, 70, 86, .06);
+}
+
+.post-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.post-tag {
+  color: #e85c87;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.post-time {
+  color: #b2a2ac;
+  font-size: 11px;
+}
+
+.post strong {
+  font-size: 17px;
+}
+
+.post p {
+  margin: 5px 0 10px;
+  color: #735f6c;
+  font-size: 14px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 20px;
+  color: #a1778d;
+  font-size: 12px;
+}
+
+.board-button {
+  display: block;
+  margin: 28px auto 0;
+  padding: 14px 35px;
+  border-radius: 999px;
+  background: white;
+  color: #e95784;
+  border: 1px solid #f3a3bb;
+  font-weight: bold;
+}
+
+
+/* ===== フッター ===== */
+footer {
+  padding: 55px 20px;
+  text-align: center;
+  background: #4c3648;
+  color: #f8edf3;
+}
+
+.footer-logo {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+footer > p {
+  font-size: 12px;
+  opacity: .8;
+}
+
+.footer-links {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 12px;
+}
+
+footer small {
+  opacity: .6;
+}
+
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 800px) {
+
+  .header {
+    padding: 12px 5%;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .logo p {
+    font-size: 9px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    margin-top: 18px;
+    padding: 45px 7%;
+    min-height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 25px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .diagnosis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnosis-card {
+    min-height: 0;
+  }
+
+  .talk-section {
+    width: 94%;
+    padding: 28px 18px;
+  }
+
+  .talk-description {
+    margin-left: 0;
+  }
+
+  .section-title h2 {
+    font-size: 23px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}/* ========================================
+   診断ページ
+======================================== */
+
+.quiz-page,
+.result-page {
+  min-height: 100vh;
+  padding: 35px 20px 70px;
+  background:
+    radial-gradient(circle at 10% 10%, #ffe5ee 0, transparent 28%),
+    radial-gradient(circle at 90% 20%, #eee5ff 0, transparent 30%),
+    #fffafa;
+}
+
+.quiz-logo {
+  text-align: center;
+  color: #e95c88;
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.quiz-box {
+  width: min(680px, 100%);
+  margin: 0 auto;
+  padding: 45px 50px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid #f4e4eb;
+  border-radius: 30px;
+  box-shadow: 0 20px 55px rgba(105,72,94,.10);
+}
+
+.quiz-progress-text {
+  text-align: right;
+  color: #b58b9f;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: .12em;
+}
+
+.quiz-progress {
+  width: 100%;
+  height: 8px;
+  margin: 10px 0 38px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f5edf2;
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f36a94, #b998ed);
+  transition: width .3s ease;
+}
+
+.quiz-number {
+  text-align: center;
+  color: #ef648f;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.quiz-box h2 {
+  margin: 8px 0 32px;
+  text-align: center;
+  color: #4d354b;
+  font-size: 27px;
+}
+
+.answer-list {
+  display: grid;
+  gap: 13px;
+}
+
+.answer-button {
+  width: 100%;
+  padding: 17px 20px;
+  border: 1px solid #f0dce5;
+  border-radius: 17px;
+  background: #fff;
+  color: #594250;
+  text-align: left;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.answer-button span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff0f5;
+  color: #e95b87;
+  font-weight: bold;
+}
+
+.answer-button:hover {
+  border-color: #f184a5;
+  background: #fff7fa;
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   診断結果
+======================================== */
+
+.result-box {
+  width: min(800px, 100%);
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 32px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 20px 60px rgba(105,72,94,.11);
+  text-align: center;
+}
+
+.result-small {
+  color: #b17f96;
+  font-size: 14px;
+}
+
+.result-icon {
+  margin: 12px 0 0;
+  color: #f05e8a;
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.result-box > h1 {
+  margin: 8px 0;
+  color: #4b3347;
+  font-size: 38px;
+}
+
+.result-catch {
+  color: #e75c87;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.result-description {
+  max-width: 650px;
+  margin: 25px auto 35px;
+  color: #725e6b;
+  line-height: 2;
+}
+
+.result-card {
+  margin-top: 18px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #fff8fa;
+  text-align: left;
+}
+
+.result-card h2 {
+  margin-bottom: 10px;
+  color: #e45d87;
+  font-size: 17px;
+}
+
+.result-card p {
+  color: #6e5967;
+}
+
+.rating-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 9px 0;
+  border-bottom: 1px solid #f3e3e9;
+}
+
+.rating-row:last-child {
+  border-bottom: 0;
+}
+
+.rating-row strong {
+  color: #ed668f;
+  letter-spacing: 3px;
+}
+
+.result-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.match-card {
+  background: linear-gradient(135deg, #fff1f6, #f7f1ff);
+}
+
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.result-buttons button {
+  padding: 13px 25px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.result-buttons button:first-child {
+  background: linear-gradient(135deg, #ef5784, #f27ca0);
+  color: white;
+}
+
+.result-buttons button:last-child {
+  background: #f2eaf0;
+  color: #755c6c;
+}
+
+
+/* スマホ */
+@media (max-width: 650px) {
+
+  .quiz-page,
+  .result-page {
+    padding: 20px 14px 50px;
+  }
+
+  .quiz-logo {
+    margin-bottom: 20px;
+  }
+
+  .quiz-box,
+  .result-box {
+    padding: 30px 20px;
+    border-radius: 23px;
+  }
+
+  .quiz-box h2 {
+    font-size: 22px;
+  }
+
+  .answer-button {
+    padding: 14px;
+  }
+
+  .result-box > h1 {
+    font-size: 30px;
+  }
+
+  .result-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .result-buttons {
+    flex-direction: column;
+  }
+
+  .result-buttons button {
+    width: 100%;
+  }
+}/* ===== SNSシェア ===== */
+
+.share-area {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #fff2f6, #f6f0ff);
+}
+
+.share-area > p {
+  margin-bottom: 15px;
+  color: #765d6d;
+  font-weight: bold;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.share-buttons button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: white;
+  color: #654e5d;
+  box-shadow: 0 5px 15px rgba(90, 60, 80, .08);
+  cursor: pointer;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.share-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.share-buttons button:first-child {
+  background: #332c32;
+  color: white;
+}
+
+.share-buttons button:nth-child(2) {
+  background: #39b54a;
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .share-buttons {
+    flex-direction: column;
+  }
+
+  .share-buttons button {
+    width: 100%;
+  }
+}/* ===== 恋愛依存度メーター ===== */
+
+.dependence-score {
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 520px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #fff1f6, #f5efff);
+}
+
+.dependence-score span {
+  display: block;
+  color: #8c7080;
+  font-weight: bold;
+}
+
+.dependence-score strong {
+  display: block;
+  margin: 5px 0 15px;
+  color: #ef5d89;
+  font-size: 45px;
+}
+
+.dependence-meter {
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: white;
+}
+
+.dependence-meter-bar {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #f37a9e,
+    #b696ed
+  );
+}/* 診断カードのボタンサイズを統一 */
+.diagnosis-card .diagnosis-button {
+  width: auto;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 16px 32px;
+}/* ===== トップページ「診断する」ボタン完全統一 ===== */
+
+.diagnosis-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.diagnosis-card p {
+  flex-grow: 1;
+}
+
+.diagnosis-card .diagnosis-button {
+  width: 120px;
+  height: 46px;
+  padding: 0;
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}/* 診断するボタンの色も全部統一 */
+.diagnosis-card .diagnosis-button {
+  width: 120px;
+  height: 46px;
+  padding: 0;
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #f37a9e, #b696ed);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
